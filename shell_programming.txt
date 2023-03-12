@@ -1,41 +1,19 @@
-#include <stdio.h>
+echo "Enter Num1"
+read num1
+echo "Enter Num2"
+read num2
+echo "Enter Num3"
+read num3
 
-void find_waiting_time(int[] processes,int[] at,int n,int[] bt,int[] wt)
-{
-    int service_time[n];
-    service_time[0] = at[0];
-    wt[0] = 0;
-    
-    for(int i =1;i<n;i++)	
-    {
-        service_time[i] = service_time[i-1] + bt[i-1];
-	wt[i] = service_time[i] - at[i]
-	
-	if(wt[i] < 0)
-	{
-	    wt[i] = 0;
-	}
-
-	
-    }
-}
-
-
-
-
-
-echo "enter 3 integer"
-read a b c
-if [$a -gt $b -a $a -gt $c]
-then 
-echo "$a is greatest"
-elif [$b -gt $a -a $b -gt $c]
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
 then
-echo "$b is greatest"
+    echo $num1
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]
+then
+    echo $num2
 else
-echo "$c is greatest"
+    echo $num3
 fi
-
 
 
 
